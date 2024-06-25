@@ -4,6 +4,7 @@ import localImage from "../../public/test.png";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      {/* ここはProfile的なcomponentsを作るほうが良さそう、about meでflex-colの変化させる感じ */}
       <div className="flex flex-col justify-center items-center gap-4">
         <Image
           src={localImage}
