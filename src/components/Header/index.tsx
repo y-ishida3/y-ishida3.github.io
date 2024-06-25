@@ -22,18 +22,18 @@ export const Header: React.FC = () => {
       <h1 className="headerText" onClick={() => router.push("/")}>
         y-ishida3 portfolio
       </h1>
-    <span className="flex-1"></span>
-    <div className="flex flex-row">
-      {labels.map((label, index) => (
-        <Button
-          className={pathName == urls[index] ? activeStyle : normalStyle}
-          onClick={() => router.push(urls[index])}
-          key={index}
-        >
-          {label}
-        </Button>
-      ))}
-    </div>
+      <span className="flex-1"></span>
+      <div className="flex flex-row">
+        {labels.map((label, index) => (
+          <Button
+            className={pathName == urls[index] ? activeStyle : normalStyle}
+            onClick={() => router.push(urls[index])}
+            key={index}
+          >
+            {label}
+          </Button>
+        ))}
+      </div>
     </header>
   );
 };
