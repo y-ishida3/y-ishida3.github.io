@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import { Button } from '@headlessui/react'
 
 import styles from "./header.module.css";
