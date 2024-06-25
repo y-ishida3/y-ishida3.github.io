@@ -1,5 +1,9 @@
+import { Profile } from '../../components/Profile'
+
 export default function AboutMe() {
   return (
-    <h1>This is About Me page!!</h1>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Profile />
+    </main>
   );
 }
