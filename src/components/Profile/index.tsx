@@ -18,7 +18,6 @@ export const Profile: React.FC = () => {
 
 
   return (
-    // {/* ここはProfile的なcomponentsを作るほうが良さそう、about meでflex-colの変化させる感じ */}
     <div className={flexStyle}>
       <Image
         src={localImage}
