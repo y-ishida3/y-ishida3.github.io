@@ -1,9 +1,9 @@
 import { Profile } from '../../components/Profile'
-// これはどこかでデータを定義しておいて、for分とかで読み込む方式がいい
 import { Experience } from '../../components/Experience'
 
 export default function AboutMe() {
-  // Skillsはこことは別のcomponentsになりそう
+  // Skillsはこことは別のcomponentsになりそう -> レイアウトをそのままにするのであれば条件分岐で
+  // :TODO データはどこに格納しておけばいいんだ？（あまりいい方法が思いつかない）
   const experiences = {
     carrer: [
       {
