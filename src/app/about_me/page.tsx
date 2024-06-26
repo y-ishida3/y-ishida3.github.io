@@ -3,20 +3,6 @@ import { Profile } from '../../components/Profile'
 import { Experience } from '../../components/Experience'
 
 export default function AboutMe() {
-  // const experiences = {
-  //   carrer: [
-  //     {
-  //       year: "2023年11月 - 現在",
-  //       jobTitle: "Data Scientist / Data Aanlyst",
-  //       companyName: "RAKSUL Inc. Data Strategy",
-  //       description: `
-  //         東京にてデータサイエンティストとして、現在は事業会社の課題や目的に合わせて、施策の立案から効果検証にかけて一気通貫して業務を行っています。
-  //         また、過去の経験からプロトタイプによる業務改善も手掛けており、分析や可視化・モデリングだけでなく、運用のための設計と実装も行っていました。
-  //       `
-  //     }
-  //   ]
-  // };
-  // 共通で使うならば、jobTitleとcompanyNameは命名規則として正しくない
   // Skillsはこことは別のcomponentsになりそう
   const experiences = {
     carrer: [
