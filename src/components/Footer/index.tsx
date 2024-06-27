@@ -20,21 +20,22 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="footerArea border-t flex items-center h-14 px-4">
-      <h1 className="footerText" onClick={() => router.push("/")}>
-        y-ishida3 portfolio
-      </h1>
-    <span className="flex-1"></span>
-    <div className="flex flex-row">
-      {labels.map((label, index) => (
-        <Button
-          className={normalStyle}
-          onClick={() => router.push(urls[index])}
-          key={index}
-        >
-          {label}
-        </Button>
-      ))}
-    </div>
+      <div className="flex flex-col text-xs text-center" onClick={() => router.push("/")}>
+        <span className="text-neutral-900">y-ishida3 portfolio</span>
+        <span className="text-neutral-400">Icons by <a href="https://icons8.com">Icons8</a></span>
+      </div>
+      <span className="flex-1"></span>
+      <div className="flex flex-row">
+        {labels.map((label, index) => (
+          <Button
+            className={normalStyle}
+            onClick={() => router.push(urls[index])}
+            key={index}
+          >
+            {label}
+          </Button>
+        ))}
+      </div>
     </footer>
   );
 };
