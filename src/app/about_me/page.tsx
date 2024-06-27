@@ -1,15 +1,54 @@
-import { Profile } from '../../components/Profile'
-import { Experience } from '../../components/Experience'
+import { Experience } from '../../components/Experience';
+import { Profile } from '../../components/Profile';
+import { Skill } from '../../components/Skill';
 
 export default function AboutMe() {
   // Skillsはこことは別のcomponentsになりそう -> レイアウトをそのままにするのであれば条件分岐で
+  // endDateを入れないと継続して利用していると見られる可能性もある
+  const skills = [
+    {
+      startDate: "2019-04-01",
+      iconName: "python--v1",
+      description: "機械学習や統計モデリング・アプリ開発"
+    },
+    {
+      startDate: "2019-04-01",
+      iconName: "javascript--v1",
+      description: "機械学習や統計モデリング・アプリ開発"
+    },
+    {
+      startDate: "2019-04-01",
+      iconName: "postgreesql",
+      description: "機械学習や統計モデリング・アプリ開発"
+    },
+    {
+      startDate: "2019-04-01",
+      iconName: "c-plus-plus-logo",
+      description: "機械学習や統計モデリング・アプリ開発"
+    },
+    {
+      startDate: "2019-04-01",
+      iconName: "git",
+      description: "機械学習や統計モデリング・アプリ開発"
+    },
+    {
+      startDate: "2019-04-01",
+      iconName: "amazon-web-services",
+      description: "機械学習や統計モデリング・アプリ開発"
+    },
+    {
+      startDate: "2019-04-01",
+      iconName: "google-cloud",
+      description: "機械学習や統計モデリング・アプリ開発"
+    },
+  ]
   // :TODO データはどこに格納しておけばいいんだ？（あまりいい方法が思いつかない）
   const experiences = {
     carrer: [
       {
         year: "2023年11月 - 現在",
         title: "Data Scientist / Data Aanlyst",
-        affiliationName: "RAKSUL Inc. Data Strategy",
+        affiliationName: "TEST",
         description: `
           東京にてデータサイエンティストとして、現在は事業会社の課題や目的に合わせて、施策の立案から効果検証にかけて一気通貫して業務を行っています。
           また、過去の経験からプロトタイプによる業務改善も手掛けており、分析や可視化・モデリングだけでなく、運用のための設計と実装も行っていました。
@@ -18,7 +57,7 @@ export default function AboutMe() {
       {
         year: "2022年7月 - 2023年11月",
         title: "Data Scientist / Analytics Consaltant",
-        affiliationName: "Deloitte",
+        affiliationName: "TEST",
         description: `
           働いていた
         `
@@ -39,6 +78,18 @@ export default function AboutMe() {
       {/* Profileに合わせて下のやつもサイズをあわせたい */}
       <Profile />
       <div className="flex flex-col justify-center items-top gap-2 p-5 w-[70%]">
+        <h1 className="title text-5xl font-bold p-2">Skills</h1>
+        <div className="grid grid-cols-4 justify-center images-center gap-3">
+          {skills.map(skill => {
+            return (
+              <Skill
+                startDate={skill.startDate}
+                iconName={skill.iconName}
+                description={skill.description}
+              />
+            )
+          })}
+        </div>
         {Object.keys(experiences).map(key => {
             {/* この書き方はリファクタリングする必要あるかも */}
             return experiences[key].map((experience, index) => {
