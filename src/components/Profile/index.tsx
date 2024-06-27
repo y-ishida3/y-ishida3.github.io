@@ -14,7 +14,6 @@ export const Profile: React.FC = () => {
   // 画像のサイズにって勝手に変えることができないのかもしれない
   const imageWidth = 500;
   const imageHeight = pathName == 'about_me' ? 200 : 100;
-  const style = `w-[${imageWidth}px] h-[${imageHeight}px]`;
 
 
   return (
@@ -25,7 +24,7 @@ export const Profile: React.FC = () => {
         height={imageHeight}
         alt="Picture of the author"
       />
-      <div className={`introductionArea ${style}`}>
+      <div className="introductionArea w-1/3">
         <h1 className="name text-5xl font-bold p-2">Yasuhiro Ishida</h1>
         <h2 className="job-title p-1 text-neutral-400">Data Scientist / Data Analyst</h2>
         <h2 className="description p-1">
