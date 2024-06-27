@@ -70,6 +70,14 @@ export default function AboutMe() {
         affiliationName: "TEST",
         description: ""
       },
+    ],
+    certification: [
+      {
+        year: "2023年11月",
+        title: "宅地建物取引士",
+        affiliationName: "",
+        description: ""
+      },
     ]
   }
 
