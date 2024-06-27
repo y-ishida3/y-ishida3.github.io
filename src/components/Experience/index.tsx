@@ -9,7 +9,7 @@ type Props = {
 // :TODO JSX.Elintと呼ばれる形にしているので、どれに統一すべきか考えたい 
 export const Experience = ({year, title, affiliationName, description}: Props) => {
     return (
-      <main>
+      <main data-aos="fade-up">
         <h2 className="year p-1 text-neutral-400">{year}</h2>
         <h2 className="title p-1 text-gray-900 font-bold">{title}</h2>
         <h2 className="affiliationName p-1 text-neutral-400 italic">{affiliationName}</h2>

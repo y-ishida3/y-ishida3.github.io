@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { AOSInit } from './aos';
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
+      <AOSInit />
       <body className={inter.className}>
         <Header />
         {children}
