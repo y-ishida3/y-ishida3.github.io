@@ -18,7 +18,7 @@ export const Header = ({labels, urls}: SiteURLType) => {
 
   return (
     <header className="headerArea border-b flex items-center h-14 px-4">
-      <h1 className="headerText" onClick={() => router.push("/")}>
+      <h1 className="headerText cursor-pointer" onClick={() => router.push("/")}>
         y-ishida3 portfolio
       </h1>
       <span className="flex-1"></span>
