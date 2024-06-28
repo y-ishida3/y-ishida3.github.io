@@ -157,7 +157,7 @@ export default function AboutMe() {
             return experiences[key].map((experience, index) => {
               return (
                 <div>
-                  {index == 0 && <h1 className="title text-5xl font-bold p-2"  data-aos="fade-up">{key.charAt(0).toUpperCase() + key.slice(1)}</h1>}
+                  {index == 0 && <h1 className="title text-5xl font-bold p-2"  data-aos="fade-up" key={`${key}_${index}`}>{key.charAt(0).toUpperCase() + key.slice(1)}</h1>}
                   <Experience
                     key={index}
                     year={experience.year}
