@@ -115,6 +115,12 @@ export default function AboutMe() {
     ],
     certification: [
       {
+        year: "2019年3月",
+        title: "宅地建物取引士",
+        affiliationName: "",
+        description: ""
+      },
+      {
         year: "2017年3月",
         title: "普通自動車免許",
         affiliationName: "",
@@ -123,12 +129,6 @@ export default function AboutMe() {
       {
         year: "2017年3月",
         title: "高等学校教諭免許（理科）",
-        affiliationName: "",
-        description: ""
-      },
-      {
-        year: "2019年3月",
-        title: "宅地建物取引士",
         affiliationName: "",
         description: ""
       },
