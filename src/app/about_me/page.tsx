@@ -153,13 +153,13 @@ export default function AboutMe() {
             )
           })}
         </div>
-        {Object.keys(experiences).map(key => {
-            return experiences[key].map((experience, index) => {
+        {Object.keys(experiences).map((key, i) => {
+            return experiences[key].map((experience, j) => {
               return (
                 <div>
-                  {index == 0 && <h1 className="title text-5xl font-bold p-2"  data-aos="fade-up" key={`${key}_${index}`}>{key.charAt(0).toUpperCase() + key.slice(1)}</h1>}
+                  {j == 0 && <h1 className="title text-5xl font-bold p-2"  data-aos="fade-up">{key.charAt(0).toUpperCase() + key.slice(1)}</h1>}
                   <Experience
-                    key={index}
+                    key={i + j}
                     year={experience.year}
                     title={experience.title}
                     affiliationName={experience.affiliationName}
