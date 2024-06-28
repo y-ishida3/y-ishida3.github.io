@@ -17,8 +17,8 @@ export const Footer = ({labels, urls}: Props) => {
   const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');
 
   // :TODO ここで定義するのがいいのか？
-  // :TODO hoverのいい定義の仕方を探す
-  const normalStyle = "gap-2 text-center text-xs text-black py-2 px-3 m-3";
+  // :TODO hoverのいい定義の仕方を探す -> 一旦はunderlineで定義
+  const normalStyle = "gap-2 text-center text-xs text-black py-2 px-3 m-3 hover:underline";
 
   return (
     <footer className="footerArea border-t flex items-center h-14 px-4">

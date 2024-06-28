@@ -9,9 +9,8 @@ export const Profile: React.FC = () => {
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
   const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');
   // :TODO ここで定義するのがいいのか？
-  // if文で定義すると下の方に引数として渡せないのはなぜ？
   const flexStyle = pathName == 'about_me' ? "flex flex-row justify-center items-top gap-4" : "flex flex-col justify-center items-center gap-4";
-  // 画像のサイズにって勝手に変えることができないのかもしれない
+  // :TODO 画像のサイズにって勝手に変えることができないのかもしれない
   const imageWidth = 500;
   const imageHeight = pathName == 'about_me' ? 200 : 100;
 

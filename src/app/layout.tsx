@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // :TODO 動的にdirectoryが変わったら定義できるようにしたい
-  const labels = ["Home", "About Me", "Works"];
-  const urls = ["/", "about_me", "works"];
+  const labels: Array<string> = ["Home", "About Me", "Works"];
+  const urls: Array<string> = ["/", "about_me", "works"];
 
   return (
     <html lang="jp">
