@@ -1,6 +1,6 @@
 import { SkillType } from "@/app/types";
 
-export const Skill = ({startDate, endDate, iconName, description}: SkillType) => {
+export const Skill = ({key, startDate, endDate, iconName, description}: SkillType) => {
   const currentDate: Date = endDate == "" ? new Date() : new Date(endDate);
   const startDate_ : Date = new Date(startDate);
   const experienceYear: string = (
@@ -10,7 +10,7 @@ export const Skill = ({startDate, endDate, iconName, description}: SkillType) =>
   ).toFixed(1);
 
   return (
-    <div className="flex flex-row gap-1">
+    <div className="flex flex-row gap-1" key={key}>
       <div className="flex flex-col items-center justify-center text-3xl">
         <img width="96" height="96" src={`https://img.icons8.com/color/96/${iconName}.png`} alt={iconName}/>
       </div>

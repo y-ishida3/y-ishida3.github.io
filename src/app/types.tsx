@@ -5,6 +5,7 @@ export type SiteURLType = {
 };
 
 export type ExperienceType = {
+  key: number,
   year: string,
   title: string,
   affiliationName: string,
@@ -12,6 +13,7 @@ export type ExperienceType = {
 };
 
 export type SkillType = {
+  key: number,
   startDate: string,
   endDate: string,
   iconName: string,
