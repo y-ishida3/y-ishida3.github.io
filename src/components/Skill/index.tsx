@@ -1,6 +1,3 @@
-// これがどういう意味があまりわかっていない
-// "use client";
-
 import { SkillType } from "@/app/types";
 
 export const Skill = ({startDate, endDate, iconName, description}: SkillType) => {

@@ -3,7 +3,7 @@
 
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
-import localImage from "../../../public/test.png";
+import localImage from "../../../public/vercel.svg";
 
 export const Profile = () => {
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
