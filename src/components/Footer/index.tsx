@@ -6,7 +6,12 @@ import { Button } from '@headlessui/react'
 
 import styles from "./footer.module.css";
 
-export const Footer: React.FC = () => {
+type Props = {
+  labels: Array<string>,
+  urls: Array<string>,
+}
+
+export const Footer = ({labels, urls}: Props) => {
   const router = useRouter();
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
   const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');
@@ -14,9 +19,6 @@ export const Footer: React.FC = () => {
   // :TODO ここで定義するのがいいのか？
   // :TODO hoverのいい定義の仕方を探す
   const normalStyle = "gap-2 text-center text-xs text-black py-2 px-3 m-3";
-  // :TODO この定義の仕方は行けていないので、directoryで定義できないか
-  const labels = ["Home", "About Me", "Works"];
-  const urls = ["/", "about_me", "works"];
 
   return (
     <footer className="footerArea border-t flex items-center h-14 px-4">

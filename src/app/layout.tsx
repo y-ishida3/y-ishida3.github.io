@@ -18,13 +18,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // :TODO 動的にdirectoryが変わったら定義できるようにしたい
+  const labels = ["Home", "About Me", "Works"];
+  const urls = ["/", "about_me", "works"];
+
   return (
     <html lang="jp">
       <AOSInit />
       <body className={inter.className}>
-        <Header />
+        <Header labels={labels} urls={urls}/>
         {children}
-        <Footer />
+        <Footer labels={labels} urls={urls}/>
       </body>
     </html>
   );
