@@ -3,7 +3,7 @@
 
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
-import localImage from "../../../public/vercel.svg";
+import localImage from "../../../public/snow.jpeg";
 
 export const Profile = () => {
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
@@ -11,17 +11,14 @@ export const Profile = () => {
   const pathName_ = pathName.replace('/', '') == '' ? '/' : pathName.replace('/', '');
   // :TODO ここで定義するのがいいのか？
   const flexStyle = pathName_ == 'about_me' ? "flex flex-row justify-center items-top gap-4" : "flex flex-col justify-center items-center gap-4";
-  // :TODO 画像のサイズにって勝手に変えることができないのかもしれない
-  const imageWidth = 500;
-  const imageHeight = pathName_ == 'about_me' ? 200 : 100;
 
 
   return (
     <div className={flexStyle}>
       <Image
+        className="rounded-2xl object-cover"
         src={localImage}
-        width={imageWidth}
-        height={imageHeight}
+        width={400}
         alt="Picture of the author"
       />
       <div className="introductionArea w-1/3">
