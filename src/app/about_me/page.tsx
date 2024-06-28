@@ -2,10 +2,12 @@ import { Experience } from '../../components/Experience';
 import { Profile } from '../../components/Profile';
 import { Skill } from '../../components/Skill';
 
+import { ExperiencesType, SkillType } from '../types';
+
 export default function AboutMe() {
   // :TODO データはどこに格納しておけばいいんだ？（あまりいい方法が思いつかない）
   // localStorageがよさそう
-  const skills = [
+  const skills: Array<SkillType> = [
     {
       startDate: "2019-04-01",
       endDate: "",
@@ -49,7 +51,8 @@ export default function AboutMe() {
       description: "Vertex AIやBigQuery"
     },
   ]
-  const experiences = {
+
+  const experiences: ExperiencesType = {
     carrer: [
       {
         year: "2023年11月 - 現在",
@@ -135,7 +138,6 @@ export default function AboutMe() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {/* Profileに合わせて下のやつもサイズをあわせたい */}
       <Profile />
       <div className="flex flex-col justify-center items-top gap-2 p-5 w-[70%]">
         <h1 className="title text-5xl font-bold p-2">Skills</h1>
@@ -152,7 +154,6 @@ export default function AboutMe() {
           })}
         </div>
         {Object.keys(experiences).map(key => {
-            {/* この書き方はリファクタリングする必要あるかも */}
             return experiences[key].map((experience, index) => {
               return (
                 <div>

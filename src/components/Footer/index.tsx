@@ -1,17 +1,12 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import { Button } from '@headlessui/react'
 
+import { SiteURLType } from "@/app/types";
 import styles from "./footer.module.css";
 
-type Props = {
-  labels: Array<string>,
-  urls: Array<string>,
-}
-
-export const Footer = ({labels, urls}: Props) => {
+export const Footer = ({labels, urls}: SiteURLType) => {
   const router = useRouter();
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
   const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');

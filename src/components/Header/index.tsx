@@ -3,14 +3,10 @@
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from '@headlessui/react'
 
+import { SiteURLType } from "@/app/types";
 import styles from "./header.module.css";
 
-type Props = {
-  labels: Array<string>,
-  urls: Array<string>,
-}
-
-export const Header = ({labels, urls}: Props) => {
+export const Header = ({labels, urls}: SiteURLType) => {
   const router = useRouter();
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
   const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');

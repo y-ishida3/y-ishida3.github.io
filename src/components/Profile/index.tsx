@@ -5,7 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import localImage from "../../../public/test.png";
 
-export const Profile: React.FC = () => {
+export const Profile = () => {
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
   const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');
   // :TODO ここで定義するのがいいのか？

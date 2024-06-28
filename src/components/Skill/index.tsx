@@ -1,20 +1,15 @@
 // これがどういう意味があまりわかっていない
 // "use client";
 
-type Props = {
-  startDate: string,
-  endDate: string,
-  iconName: string,
-  description: string
-}
+import { SkillType } from "@/app/types";
 
-export const Skill = ({startDate, endDate, iconName, description}: Props) => {
-  const currentDate = endDate == "" ? new Date() : new Date(endDate);
-  const startDate_ = new Date(startDate);
-  const experienceYear = (
+export const Skill = ({startDate, endDate, iconName, description}: SkillType) => {
+  const currentDate: Date = endDate == "" ? new Date() : new Date(endDate);
+  const startDate_ : Date = new Date(startDate);
+  const experienceYear: string = (
     // ミリ秒単位なので、ミリ秒->秒->分->時間->日->年に変換
     // 少数第一位まで出力するために100をかけて100で割っている
-    Math.round(((currentDate - startDate_) / 1000 / 60 / 60 / 24 / 365 * 10)) / 10
+    Math.round(((currentDate.getTime() - startDate_.getTime()) / 1000 / 60 / 60 / 24 / 365 * 10)) / 10
   ).toFixed(1);
 
   return (

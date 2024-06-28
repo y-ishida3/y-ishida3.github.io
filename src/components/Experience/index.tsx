@@ -1,13 +1,6 @@
-// どこにデータかjsonを定義しておいて、それを読み込む形式にしたい
-type Props = {
-  year: string,
-  title: string,
-  affiliationName: string,
-  description: string
-}
+import { ExperienceType } from "@/app/types";
 
-// :TODO JSX.Elintと呼ばれる形にしているので、どれに統一すべきか考えたい 
-export const Experience = ({year, title, affiliationName, description}: Props) => {
+export const Experience = ({year, title, affiliationName, description}: ExperienceType) => {
     return (
       <main data-aos="fade-up">
         <h2 className="year p-1 text-neutral-400">{year}</h2>
