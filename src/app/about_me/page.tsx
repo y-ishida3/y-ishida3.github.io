@@ -156,7 +156,7 @@ export default function AboutMe() {
         {Object.keys(experiences).map((key, i) => {
             return experiences[key].map((experience, j) => {
               return (
-                <div>
+                <div key={i + j}>
                   {j == 0 && <h1 className="title text-5xl font-bold p-2"  data-aos="fade-up">{key.charAt(0).toUpperCase() + key.slice(1)}</h1>}
                   <Experience
                     key={i + j}
