@@ -9,7 +9,8 @@ import styles from "./footer.module.css";
 export const Footer = ({labels, urls}: SiteURLType) => {
   const router = useRouter();
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
-  const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');
+  const pathName = usePathname()
+  const pathName_ = pathName.replace('/', '') == '' ? '/' : pathName.replace('/', '');
 
   // :TODO ここで定義するのがいいのか？
   // :TODO hoverのいい定義の仕方を探す -> 一旦はunderlineで定義

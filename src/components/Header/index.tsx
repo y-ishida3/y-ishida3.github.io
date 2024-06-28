@@ -9,7 +9,8 @@ import styles from "./header.module.css";
 export const Header = ({labels, urls}: SiteURLType) => {
   const router = useRouter();
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
-  const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');
+  const pathName = usePathname()
+  const pathName_ = pathName.replace('/', '') == '' ? '/' : pathName.replace('/', '');
 
   // :TODO ここで定義するのがいいのか？
   const normalStyle = "w-20 gap-2 rounded-md bg-white-100 text-center text-xs text-black py-2 px-3 m-3 hover:bg-gray-900 hover:text-white";
