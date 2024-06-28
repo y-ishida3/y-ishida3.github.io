@@ -7,12 +7,13 @@ import localImage from "../../../public/vercel.svg";
 
 export const Profile = () => {
   // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
-  const pathName = usePathname().replace('/', '') == '' ? '/' : usePathname().replace('/', '');
+  const pathName = usePathname()
+  const pathName_ = pathName.replace('/', '') == '' ? '/' : pathName.replace('/', '');
   // :TODO ここで定義するのがいいのか？
-  const flexStyle = pathName == 'about_me' ? "flex flex-row justify-center items-top gap-4" : "flex flex-col justify-center items-center gap-4";
+  const flexStyle = pathName_ == 'about_me' ? "flex flex-row justify-center items-top gap-4" : "flex flex-col justify-center items-center gap-4";
   // :TODO 画像のサイズにって勝手に変えることができないのかもしれない
   const imageWidth = 500;
-  const imageHeight = pathName == 'about_me' ? 200 : 100;
+  const imageHeight = pathName_ == 'about_me' ? 200 : 100;
 
 
   return (
