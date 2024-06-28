@@ -141,9 +141,10 @@ export default function AboutMe() {
       <div className="flex flex-col justify-center items-top gap-2 p-5 w-[70%]">
         <h1 className="title text-5xl font-bold p-2">Skills</h1>
         <div className="grid grid-cols-4 justify-center images-center gap-3">
-          {skills.map(skill => {
+          {skills.map((skill, index) => {
             return (
               <Skill
+                key={index}
                 startDate={skill.startDate}
                 endDate={skill.endDate}
                 iconName={skill.iconName}
@@ -158,6 +159,7 @@ export default function AboutMe() {
                 <div>
                   {index == 0 && <h1 className="title text-5xl font-bold p-2"  data-aos="fade-up">{key.charAt(0).toUpperCase() + key.slice(1)}</h1>}
                   <Experience
+                    key={index}
                     year={experience.year}
                     title={experience.title}
                     affiliationName={experience.affiliationName}
