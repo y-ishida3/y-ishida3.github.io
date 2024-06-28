@@ -3,12 +3,13 @@
 
 type Props = {
   startDate: string,
+  endDate: string,
   iconName: string,
   description: string
 }
 
-export const Skill = ({startDate, iconName, description}: Props) => {
-  const currentDate = new Date();
+export const Skill = ({startDate, endDate, iconName, description}: Props) => {
+  const currentDate = endDate == "" ? new Date() : new Date(endDate);
   const startDate_ = new Date(startDate);
   const experienceYear = (
     // ミリ秒単位なので、ミリ秒->秒->分->時間->日->年に変換
