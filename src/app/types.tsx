@@ -22,5 +22,4 @@ export type SkillType = {
 
 export type ExperiencesType = {
   [key: string]: Array<ExperienceType>,
-
 };

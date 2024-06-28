@@ -9,42 +9,49 @@ export default function AboutMe() {
   // localStorageがよさそう
   const skills: Array<SkillType> = [
     {
+      key: 1,
       startDate: "2019-04-01",
       endDate: "",
       iconName: "python--v1",
       description: "機械学習や統計モデリング・アプリ開発"
     },
     {
+      key: 2,
       startDate: "2019-04-01",
       endDate: "2022-07-01",
       iconName: "javascript--v1",
       description: "フロントエンドの開発"
     },
     {
+      key: 3,
       startDate: "2019-04-01",
       endDate: "",
       iconName: "postgreesql",
       description: "データの抽出やDB設計・マートの作成"
     },
     {
+      key: 4,
       startDate: "2022-11-01",
       endDate: "2023-03-01",
       iconName: "c-plus-plus-logo",
       description: "機械学習アルゴリズムの実装・DLL"
     },
     {
+      key: 5,
       startDate: "2019-04-01",
       endDate: "",
       iconName: "git",
       description: "version管理"
     },
     {
+      key: 6,
       startDate: "2019-04-01",
       endDate: "2022-07-01",
       iconName: "amazon-web-services",
       description: "EC2やS3・lambdaのインフラ"
     },
     {
+      key: 7,
       startDate: "2023-11-01",
       endDate: "",
       iconName: "google-cloud",
@@ -55,6 +62,7 @@ export default function AboutMe() {
   const experiences: ExperiencesType = {
     carrer: [
       {
+        key: 8,
         year: "2023年11月 - 現在",
         title: "Data Scientist / Data Aanlyst",
         affiliationName: "RAKSUL Inc. Data Startegy",
@@ -63,6 +71,7 @@ export default function AboutMe() {
         `
       },
       {
+        key: 9,
         year: "2022年7月 - 2023年11月",
         title: "Data Scientist / Analytics Consaltant",
         affiliationName: "Deloitte Touche Tohmatsu LLC. Deloitte Analytics",
@@ -71,6 +80,7 @@ export default function AboutMe() {
         `
       },
       {
+        key: 10,
         year: "2019年4月 - 2022年6月",
         title: "Data Scientist / AI Engineer",
         affiliationName: "GA technologies Inc. AI Strategy Center",
@@ -81,12 +91,14 @@ export default function AboutMe() {
     ],
     education: [
       {
+        key: 11,
         year: "2017年4月 - 2019年3月",
         title: "Master of Business Administration",
         affiliationName: "岡山大学 社会文化科学研究科 組織経営専攻",
         description: ""
       },
       {
+        key: 12,
         year: "2013年4月 - 2017年3月",
         title: "Bachelor of Biological Resource Science",
         affiliationName: "島根大学 生物資源科学部 農林生産学科",
@@ -95,18 +107,21 @@ export default function AboutMe() {
     ],
     others: [
       {
+        key: 13,
         year: "2021年",
         title: "電通大学「データアントレプレナーフェロープログラム」- 「回帰モデル作成（不動産データ分析）」講師",
         affiliationName: "",
         description: ""
       },
       {
+        key: 14,
         year: "2020年",
         title: "電通大学「データアントレプレナーフェロープログラム」- 「ケース研究　不動産」講師",
         affiliationName: "",
         description: ""
       },
       {
+        key: 15,
         year: "2020年",
         title: "日本行動計量学会 第48回大会 「Open Street Mapを活用した交通機関に関する騒音リスクマップの開発」 学会発表",
         affiliationName: "",
@@ -115,18 +130,21 @@ export default function AboutMe() {
     ],
     certification: [
       {
+        key: 16,
         year: "2019年3月",
         title: "宅地建物取引士",
         affiliationName: "",
         description: ""
       },
       {
+        key: 17,
         year: "2017年3月",
         title: "普通自動車免許",
         affiliationName: "",
         description: ""
       },
       {
+        key: 18,
         year: "2017年3月",
         title: "高等学校教諭免許（理科）",
         affiliationName: "",
@@ -141,10 +159,10 @@ export default function AboutMe() {
       <div className="flex flex-col justify-center items-top gap-2 p-5 w-[70%]">
         <h1 className="title text-5xl font-bold p-2">Skills</h1>
         <div className="grid grid-cols-4 justify-center images-center gap-3">
-          {skills.map((skill, index) => {
+          {skills.map(skill => {
             return (
               <Skill
-                key={index}
+                key={skill.key}
                 startDate={skill.startDate}
                 endDate={skill.endDate}
                 iconName={skill.iconName}
@@ -159,7 +177,7 @@ export default function AboutMe() {
                 <div key={i + j}>
                   {j == 0 && <h1 className="title text-5xl font-bold p-2"  data-aos="fade-up">{key.charAt(0).toUpperCase() + key.slice(1)}</h1>}
                   <Experience
-                    key={i + j}
+                    key={experience.key}
                     year={experience.year}
                     title={experience.title}
                     affiliationName={experience.affiliationName}
