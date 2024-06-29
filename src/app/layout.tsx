@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import { AOSInit } from './aos';
+import { AOSInit } from '../lib/aos';
+import { GoogleAnalytics } from '../lib/gatag';
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
 
   return (
     <html lang="jp">
+      <GoogleAnalytics />
       <AOSInit />
       <body className={inter.className}>
         <Header labels={labels} urls={urls}/>

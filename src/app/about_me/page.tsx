@@ -2,7 +2,7 @@ import { Experience } from '../../components/Experience';
 import { Profile } from '../../components/Profile';
 import { Skill } from '../../components/Skill';
 
-import { ExperiencesType, SkillType } from '../types';
+import { ExperiencesType, SkillType } from '../../types/base';
 
 export default function AboutMe() {
   // :TODO データはどこに格納しておけばいいんだ？（あまりいい方法が思いつかない）
