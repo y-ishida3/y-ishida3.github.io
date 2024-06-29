@@ -25,7 +25,7 @@ export const Header = ({labels, urls}: SiteURLType) => {
       <div className="flex flex-row">
         {labels.map((label, index) => (
           <Button
-            className={pathName == urls[index] ? activeStyle : normalStyle}
+            className={pathName_ == urls[index] ? activeStyle : normalStyle}
             onClick={() => router.push(urls[index])}
             key={index}
           >

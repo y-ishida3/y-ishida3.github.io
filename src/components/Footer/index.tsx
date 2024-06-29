@@ -8,10 +8,6 @@ import styles from "./footer.module.css";
 
 export const Footer = ({labels, urls}: SiteURLType) => {
   const router = useRouter();
-  // :TODO 現状Reactのバグが発生しているので、将来的に治す必要がある模様
-  const pathName = usePathname()
-  const pathName_ = pathName.replace('/', '') == '' ? '/' : pathName.replace('/', '');
-
   // :TODO ここで定義するのがいいのか？
   // :TODO hoverのいい定義の仕方を探す -> 一旦はunderlineで定義
   const normalStyle = "gap-2 text-center text-xs text-black py-2 px-3 m-3 hover:underline";
