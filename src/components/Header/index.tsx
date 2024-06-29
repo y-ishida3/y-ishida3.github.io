@@ -3,7 +3,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from '@headlessui/react'
 
-import { SiteURLType } from "@/app/types";
+import { SiteURLType } from "@/types/base";
 import styles from "./header.module.css";
 
 export const Header = ({labels, urls}: SiteURLType) => {

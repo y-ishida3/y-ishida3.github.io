@@ -1,4 +1,4 @@
-import { ExperienceType } from "@/app/types";
+import { ExperienceType } from "@/types/base";
 
 export const Experience = ({key, year, title, affiliationName, description}: ExperienceType) => {
     return (
