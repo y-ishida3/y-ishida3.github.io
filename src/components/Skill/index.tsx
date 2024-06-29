@@ -1,4 +1,4 @@
-import { SkillType } from "@/app/types";
+import { SkillType } from "@/types/base";
 
 export const Skill = ({key, startDate, endDate, iconName, description}: SkillType) => {
   const currentDate: Date = endDate == "" ? new Date() : new Date(endDate);
