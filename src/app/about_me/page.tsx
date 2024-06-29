@@ -139,13 +139,6 @@ export default function AboutMe() {
       {
         key: 17,
         year: "2017年3月",
-        title: "普通自動車免許",
-        affiliationName: "",
-        description: ""
-      },
-      {
-        key: 18,
-        year: "2017年3月",
         title: "高等学校教諭免許（理科）",
         affiliationName: "",
         description: ""
