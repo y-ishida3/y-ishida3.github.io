@@ -64,7 +64,7 @@ export default function AboutMe() {
       {
         key: 8,
         year: "2023年11月 - 現在",
-        title: "Data Scientist / Data Aanlyst",
+        title: "Data Scientist / Data Analyst",
         affiliationName: "RAKSUL Inc. Data Startegy",
         description: `
           因果推論や数理最適化を用いた課題解決アプローチで施策実施の効果検証やその後の運用のための実装を担当。
