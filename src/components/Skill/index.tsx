@@ -5,7 +5,7 @@ export const Skill = ({key, startDate, endDate, iconName, description}: SkillTyp
   const startDate_ : Date = new Date(startDate);
   const experienceYear: string = (
     // ミリ秒単位なので、ミリ秒->秒->分->時間->日->年に変換
-    // 少数第一位まで出力するために100をかけて100で割っている
+    // 少数第一位まで出力するために10をかけて10で割っている
     Math.round(((currentDate.getTime() - startDate_.getTime()) / 1000 / 60 / 60 / 24 / 365 * 10)) / 10
   ).toFixed(1);
 
