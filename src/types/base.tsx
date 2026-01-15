@@ -23,3 +23,10 @@ export type SkillType = {
 export type ExperiencesType = {
   [key: string]: Array<ExperienceType>,
 };
+
+export type ArticleType = {
+  key?: number;
+  title: string;
+  url: string;
+  publishedAt: string;
+};
