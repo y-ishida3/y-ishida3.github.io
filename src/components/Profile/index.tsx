@@ -35,6 +35,9 @@ export const Profile = () => {
           <a href="https://github.com/y-ishida3">
             <img width="100" height="100" src="https://img.icons8.com/fluency-systems-filled/100/github.png" alt="github"/>
           </a>
+          <a href="https://www.kaggle.com/yishida3">
+            <img width="90" height="90" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/100/external-kaggle-an-online-community-of-data-scientists-and-machine-learners-owned-by-google-logo-shadow-tal-revivo.png" alt="kaggle"/>
+          </a>
         </div>
       </div>
     </div>
