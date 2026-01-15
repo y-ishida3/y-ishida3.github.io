@@ -127,6 +127,13 @@ export default function AboutMe() {
         affiliationName: "",
         description: ""
       },
+      {
+        key: 18,
+        year: "2025年",
+        title: "人工知能学会 第39回大会 「因果推論による価格表単位でのプライシング施策の効果量の推定」 学会発表",
+        affiliationName: "",
+        description: ""
+      },
     ],
     certification: [
       {
