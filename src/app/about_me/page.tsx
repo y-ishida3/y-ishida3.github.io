@@ -26,7 +26,7 @@ export default function AboutMe() {
       key: 3,
       startDate: "2019-04-01",
       endDate: "",
-      iconName: "postgreesql",
+      iconName: "postgresql",
       description: "データの抽出やDB設計・マートの作成"
     },
     {
@@ -41,14 +41,14 @@ export default function AboutMe() {
       startDate: "2019-04-01",
       endDate: "",
       iconName: "git",
-      description: "version管理"
+      description: "バージョン管理"
     },
     {
       key: 6,
       startDate: "2019-04-01",
       endDate: "2022-07-01",
       iconName: "amazon-web-services",
-      description: "EC2やS3・lambdaのインフラ"
+      description: "EC2やS3・Lambdaのインフラ"
     },
     {
       key: 7,
@@ -60,12 +60,12 @@ export default function AboutMe() {
   ]
 
   const experiences: ExperiencesType = {
-    carrer: [
+    career: [ // carrer -> career
       {
         key: 8,
         year: "2023年11月 - 現在",
-        title: "Data Scientist / Data Aanlyst",
-        affiliationName: "RAKSUL Inc. Data Startegy",
+        title: "Data Scientist / Data Analyst",
+        affiliationName: "RAKSUL Inc. Data Strategy",
         description: `
           因果推論や数理最適化を用いた課題解決アプローチで施策実施の効果検証やその後の運用のための実装を担当。
         `
@@ -73,10 +73,10 @@ export default function AboutMe() {
       {
         key: 9,
         year: "2022年7月 - 2023年11月",
-        title: "Data Scientist / Analytics Consaltant",
+        title: "Data Scientist / Analytics Consultant",
         affiliationName: "Deloitte Touche Tohmatsu LLC. Deloitte Analytics",
         description: `
-          官公庁向けのプロジェクトにおけるコンサルタント側の業務改善を目的としたETLツールやの開発や金融機関に向けた法人営業のための金融モデルの資料化や需要予測ツールの開発といったアナリティクスサービスに従事。
+          官公庁向けのプロジェクトにおけるコンサルタント側の業務改善を目的としたETLツールの開発や、金融機関に向けた法人営業のための金融モデルの資料化や需要予測ツールの開発といったアナリティクスサービスに従事。
         `
       },
       {
