@@ -60,7 +60,7 @@ export default function AboutMe() {
   ]
 
   const experiences: ExperiencesType = {
-    career: [ // carrer -> career
+    career: [
       {
         key: 8,
         year: "2023年11月 - 現在",
