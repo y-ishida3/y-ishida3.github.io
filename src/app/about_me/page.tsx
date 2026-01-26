@@ -26,7 +26,7 @@ export default function AboutMe() {
       key: 3,
       startDate: "2019-04-01",
       endDate: "",
-      iconName: "postgreesql",
+      iconName: "sql",
       description: "データの抽出やDB設計・マートの作成"
     },
     {
