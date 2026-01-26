@@ -1,3 +1,5 @@
+"use client";
+
 import { SkillType } from "@/types/base";
 
 export const Skill = ({key, startDate, endDate, iconName, description}: SkillType) => {
@@ -15,7 +17,7 @@ export const Skill = ({key, startDate, endDate, iconName, description}: SkillTyp
         <img width="96" height="96" src={`https://img.icons8.com/color/96/${iconName}.png`} alt={iconName}/>
       </div>
       <div className="flex flex-col justify-center images-center gap-1">
-        <div className="text-xl font-bold">{experienceYear}年</div>
+        <div className="text-xl font-bold" suppressHydrationWarning>{experienceYear}年</div>
         <div className="text-neutral-400 text-xs">{description}</div>
       </div>
     </div>
